@@ -36,3 +36,47 @@ let scores = [85, 92, 78, 95, 88, 73, 90];
 for(let testcase of scores ){
     console.log(testcase);
 }
+
+
+let testScores = [85, 92, 78, 95, 88, 73, 90];
+//Find out all the values in an array whicha re greater than 80)
+console.log("new");
+for(let i=0;i<testScores.length;i++)
+{
+    if(testScores[i]>85)
+    {
+        console.log(testScores[i]);
+    }
+}
+let testResult=["Passed","Passed","Failed","Passed","Failed","Passed"];
+let result=testScores.map((score)=>score>80?"Passed": "Failed");
+// let highScore=testScores.filter((score)=>score>80);
+// result=testScores[score];
+console.log("Result");
+console.log(result);
+
+let firstResult=testScores.find((score)=>score<80);
+console.log(firstResult)
+let allPassed=testScores.every((score)=>score>80);
+console.log(allPassed);
+
+let allFailed=testScores.some((score)=>score>80);
+console.log(allPassed);
+ //let allFailed=testScores.some((score)=>score>80);
+//console.log(allPassed);
+
+
+let tests=[
+    {name: "Login test",status:"passed",duration:2.5},
+    {name: "Logout test",status:"passed",duration:1.6},
+    {name: "search test",status:"Failed",duration:5.3},
+    {name: "Checkout test",status:"passed",duration:2.3},
+]
+
+tests.forEach((test) => console.log("-"+test.name+" "+test.status));
+console.log();
+function add(a,b){
+    return a+b;
+}
+let arrayone=[10,20];
+console.log(add(...arrayone));
